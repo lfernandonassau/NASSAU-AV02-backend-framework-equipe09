@@ -63,7 +63,7 @@ O **GoConsig** centraliza todo o processo, garantindo que as propostas sejam env
 - **Aluno:** João Manoel da Silva Santos | **Matrícula:** 01695227
 - **Aluno:** Gabriel Portela de Lima Santos | **Matrícula:** 01677269 
 - **Aluno:** Gustavo Emmanuel dos Santos | **Matrícula:** 01720235
-- **Aluno:** Edison Campos | **Matrícula:** Pendente
+- **Aluno:** Edison Campos Cavalcante | **Matrícula:** 01704611 
 - **Aluno:** Vinícius Emanuel | **Matrícula:** Pendente
 
 
