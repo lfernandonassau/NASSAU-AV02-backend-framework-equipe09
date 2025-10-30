@@ -1,7 +1,7 @@
 # GoConsig Prototipo
 
 ## 📌 Sobre o Projeto
-O **GoConsig** é um framework desenvolvido para **automatizar e padronizar o processo de cadastro e análise de propostas de empréstimos consignados**.  
+O **GoConsig** é uma aplicação/framework desenvolvido para **automatizar e padronizar o processo de cadastro e análise de propostas de empréstimos consignados**.  
 
 Hoje, muitos dados são preenchidos manualmente e enviados a diferentes bancos, o que gera:
 - Erros de digitação  
@@ -25,12 +25,12 @@ O **GoConsig** centraliza todo o processo, garantindo que as propostas sejam env
 - **Correspondentes bancários** que lidam com várias instituições financeiras  
 - **Gerentes de relacionamento** em bancos  
 - **Parceiros cadastrados** nas promotoras/correspondentes  
-- **Clientes finais** (indiretamente, com um processo mais rápido e seguro)  
+- **Clientes finais** (indiretamente ou diretamente, com um processo mais rápido e seguro) 
 
 ---
 
 ## ⚙️ Funcionalidades Principais
-- Cadastro único de cliente (**nome, CPF, margem consignável, documentos**)  
+- **Cadastro único de cliente** (nome, CPF, margem consignável, documentos)  
 - **Validação automática** (margem, idade mínima, vínculos ativos no órgão pagador)  
 - **Geração de proposta padronizada** para múltiplos bancos em um clique  
 - **Painel de status** para acompanhar aprovações, pendências e repasses  
