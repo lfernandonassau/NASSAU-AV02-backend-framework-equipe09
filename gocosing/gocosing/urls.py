@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views as core_views
+from usuarios import views as usuarios_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #rota, views responsável, nome de referência
+
+    #GoCosing.com.br
+    path('', core_views.home, name='home'),
+    
+    #Login
+    path('login/', usuarios_views.login, name='login'),
+    #Cadastro
+    path('cadastro/', usuarios_views.cadastro, name='cadastro'),
 ]
