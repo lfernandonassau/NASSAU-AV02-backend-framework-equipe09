@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gocosing.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'goconsig.settings')
 
 application = get_wsgi_application()
