@@ -48,11 +48,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bancos',
-    'parceiros',
-    'usuarios',
-    'emprestimos',
-    'core',
+    'app_bancos',
+    'app_parceiros',
+    'app_usuarios',
+    'app_emprestimos',
+    'app_core',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'gocosing.urls'
+ROOT_URLCONF = 'goconsig.urls'
 
 TEMPLATES = [
     {
@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'gocosing.wsgi.application'
+WSGI_APPLICATION = 'goconsig.wsgi.application'
 
 
 # Database
