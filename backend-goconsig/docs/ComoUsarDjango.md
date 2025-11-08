@@ -15,7 +15,7 @@ Para inicializar um projeto Django, siga os passos abaixo:
 3. **Navegue até o Diretório do Projeto**: Entre no diretório do seu projeto:
 
    ```
-   cd gocosing
+   cd back-end-goconsig
    ```
 
 4. **Chave de API**: Para algumas funcionalidades, você pode precisar de uma chave de API. Verifique a documentação do Django ou do serviço que está utilizando para obter instruções sobre como gerar e usar uma chave de API.
