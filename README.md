@@ -68,3 +68,12 @@ O **GoConsig** centraliza todo o processo, garantindo que as propostas sejam env
 
 
 ---
+
+# 🛠️ Tecnologias Utilizadas
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Backend:** Node.js, Express.js, Django
+- **Banco de Dados:** SQLite
+- **Autenticação:** Django AUTH
+- **Estilização:** CSS, Styled Components, Tailwind CSS
+- **Controle de Versão:** Git, GitHub
