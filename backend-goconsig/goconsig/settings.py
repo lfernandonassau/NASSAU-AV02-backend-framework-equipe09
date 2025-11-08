@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,18 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # carregar .env na raiz do projeto
 # localizar raiz do repositório (um nível acima de BASE_DIR atual)
 REPO_ROOT = BASE_DIR.parent
-load_dotenv(REPO_ROOT / '.env')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # obter SECRET_KEY e falhar rapidamente se não existir
-SECRET_KEY = os.getenv('SECRET_KEY')
-if not SECRET_KEY:
-    raise RuntimeError(
-        "SECRET_KEY não encontrado. Crie um arquivo .env na raiz do repositório com SECRET_KEY=..."
-    )
+SECRET_KEY = 'django-insecure-oc6xc0gu$r1n2bn9$h=bgdi-_in5$_1l6@2+nkt$)1-4g8_f*k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -70,7 +66,7 @@ ROOT_URLCONF = 'goconsig.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [REPO_ROOT / 'frontend-goconsig' / 'dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,6 +127,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    REPO_ROOT / 'frontend-goconsig' / 'dist',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

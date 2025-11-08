@@ -18,10 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from app_core import views as core_views
 from app_usuarios import views as usuarios_views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #rota, views responsável, nome de referência
+    
+    #React
+    path('', TemplateView.as_view(template_name='index.html')),
 
     #GoCosing.com.br
     path('', core_views.home, name='home'),
