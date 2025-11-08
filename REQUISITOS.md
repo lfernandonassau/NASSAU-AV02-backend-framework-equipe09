@@ -9,35 +9,24 @@ A **venv** cria um ambiente isolado para instalar pacotes e dependências apenas
 ## Como criar e ativar a venv
 
 1. Abra o terminal na pasta do projeto.
-
-```bash
-cd caminho/para/o/projeto
-```
-
 2. Crie o ambiente virtual com o comando:
-
-   ```bash
+   ```
    python -m venv venv
    ```
-
 3. Ative o ambiente virtual:
    - No Windows:
-
-     ```bash
+     ```
      .\venv\Scripts\activate
      ```
-
    - No Linux/Mac:
-
-     ```bash
+     ```
      source venv/bin/activate
      ```
 
 ## Instalação das dependências
 
 Com a venv ativada, instale as dependências usando:
-
-```bash
+```
 pip install -r requirements.txt
 ```
 
