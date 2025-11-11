@@ -63,8 +63,8 @@ npm run build
 ## Servir frontend a partir do Django (opção integrada)
 - Fluxo recomendado em dev: gerar build (`npm run build`) e o Django serve o `dist/`.
 - Verifique em `settings.py`:
-  - `TEMPLATES['DIRS']` deve incluir `frontend-gocinsig/dist`
-  - `STATICFILES_DIRS` deve incluir `frontend-gocinsig/dist`
+  - `TEMPLATES['DIRS']` deve incluir `frontend-goconsig/dist`
+  - `STATICFILES_DIRS` deve incluir `frontend-goconsig/dist`
 - Depois de build:
 ```powershell
 # na raiz do repo
