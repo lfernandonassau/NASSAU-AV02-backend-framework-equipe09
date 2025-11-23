@@ -9,24 +9,35 @@ A **venv** cria um ambiente isolado para instalar pacotes e dependências apenas
 ## Como criar e ativar a venv
 
 1. Abra o terminal na pasta do projeto.
+
+```bash
+cd caminho/para/o/projeto
+```
+
 2. Crie o ambiente virtual com o comando:
-   ```
+
+   ```bash
    python -m venv venv
    ```
+
 3. Ative o ambiente virtual:
    - No Windows:
-     ```
+
+     ```bash
      .\venv\Scripts\activate
      ```
+
    - No Linux/Mac:
-     ```
+
+     ```bash
      source venv/bin/activate
      ```
 
 ## Instalação das dependências
 
 Com a venv ativada, instale as dependências usando:
-```
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -35,10 +46,3 @@ pip install -r requirements.txt
 - **Mantenha sempre as versões dos pacotes o mais atualizadas possível**, conforme especificado no arquivo `requirements.txt` (usando `>=`).
 - Execute todos os comandos dentro da venv para garantir o correto funcionamento do projeto.
 - A linguagem utilizada é **Python**.
-
-btnAcessarCRUD = Button(frame, text="Acessar CRUD", command=acessar_crud)
-btnAcessarCRUD.pack(pady=10)
-
-def acessar_crud():
-    print("Acessando CRUD...")
-    # Aqui você pode adicionar a lógica para acessar a interface CRUD

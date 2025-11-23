@@ -1,7 +1,7 @@
 # GoConsig Prototipo
 
 ## 📌 Sobre o Projeto
-O **GoConsig** é um framework desenvolvido para **automatizar e padronizar o processo de cadastro e análise de propostas de empréstimos consignados**.  
+O **GoConsig** é uma aplicação/framework desenvolvido para **automatizar e padronizar o processo de cadastro e análise de propostas de empréstimos consignados**.  
 
 Hoje, muitos dados são preenchidos manualmente e enviados a diferentes bancos, o que gera:
 - Erros de digitação  
@@ -25,12 +25,12 @@ O **GoConsig** centraliza todo o processo, garantindo que as propostas sejam env
 - **Correspondentes bancários** que lidam com várias instituições financeiras  
 - **Gerentes de relacionamento** em bancos  
 - **Parceiros cadastrados** nas promotoras/correspondentes  
-- **Clientes finais** (indiretamente, com um processo mais rápido e seguro)  
+- **Clientes finais** (indiretamente ou diretamente, com um processo mais rápido e seguro) 
 
 ---
 
 ## ⚙️ Funcionalidades Principais
-- Cadastro único de cliente (**nome, CPF, margem consignável, documentos**)  
+- **Cadastro único de cliente** (nome, CPF, margem consignável, documentos)  
 - **Validação automática** (margem, idade mínima, vínculos ativos no órgão pagador)  
 - **Geração de proposta padronizada** para múltiplos bancos em um clique  
 - **Painel de status** para acompanhar aprovações, pendências e repasses  
@@ -63,8 +63,17 @@ O **GoConsig** centraliza todo o processo, garantindo que as propostas sejam env
 - **Aluno:** João Manoel da Silva Santos | **Matrícula:** 01695227
 - **Aluno:** Gabriel Portela de Lima Santos | **Matrícula:** 01677269 
 - **Aluno:** Gustavo Emmanuel dos Santos | **Matrícula:** 01720235
-- **Aluno:** Edison Campos | **Matrícula:** Pendente
-- **Aluno:** Vinícius Emanuel | **Matrícula:** Pendente
+- **Aluno:** Edison Campos Cavalcante | **Matrícula:** 01704611 
+- **Aluno:** Vinícius Emanuel Rosendo Cabral | **Matrícula:** 01672036
 
 
 ---
+
+# 🛠️ Tecnologias Utilizadas
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Backend:** Node.js, Express.js, Django
+- **Banco de Dados:** SQLite
+- **Autenticação:** Django AUTH
+- **Estilização:** CSS, Styled Components, Tailwind CSS
+- **Controle de Versão:** Git, GitHub
