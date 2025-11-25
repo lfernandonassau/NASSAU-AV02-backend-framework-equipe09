@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Parceiros(models.Model):
+    matricula = models.CharField(primary_key=True)
+    nome = models.CharField(max_length=100)
+    
