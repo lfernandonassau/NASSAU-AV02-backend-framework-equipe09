@@ -15,23 +15,30 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from app_usuarios.views import ClienteViewSet
+from rest_framework.routers import DefaultRouter 
 from app_core import views as core_views
 from app_usuarios import views as usuarios_views
 from django.views.generic import TemplateView
 
+router = DefaultRouter()
+router.register(r'clientes', ClienteViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     #rota, views responsável, nome de referência
+    path('api/', include(router.urls)),
     
     #React
     path('', TemplateView.as_view(template_name='index.html')),
 
+
     #GoCosing.com.br
-    path('', core_views.home, name='home'),
+    #path('', core_views.home, name='home'),
     
     #Login
-    path('login/', usuarios_views.login, name='login'),
+    #path('login/', usuarios_views.login, name='login'),
     #Cadastro
-    path('cadastro/', usuarios_views.cadastro, name='cadastro'),
+    #path('cadastro/', usuarios_views.cadastro, name='cadastro'),           
 ]
