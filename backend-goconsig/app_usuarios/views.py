@@ -1,8 +1,17 @@
 from django.shortcuts import render
-
+from rest_framework import viewsets
+from .models import Cliente
+from .serializers import ClienteSerializer
+'''from . models import Usuario'''
 # Create your views here.
-def login(request):
-    return render(request, 'usuario/login.html')
+class ClienteViewSet(viewsets.ModelViewSet):
+    queryset = Cliente.objects.all()
+    serializer_class = ClienteSerializer
 
-def cadastro(request):
-    return render(request, 'usuario/cadastro.html')
+'''
+def usuarios(request):
+    novo_usuario = Usuario()
+    request.POST.get('email')
+    request.POST.get('cpf')
+    request.POST.get('senha')
+'''       
