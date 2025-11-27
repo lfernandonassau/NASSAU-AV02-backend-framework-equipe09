@@ -5,3 +5,7 @@ class Banco(models.Model):
     nome = models.CharField(max_length=100)
     fator = models.DecimalField(max_digits=10, decimal_places=6)
     comissao_parceiro = models.DecimalField(max_digits=5, decimal_places=4)
+
+    def __str__(self):
+        return f"{self.nome} ({self.codigo_banco})"
+

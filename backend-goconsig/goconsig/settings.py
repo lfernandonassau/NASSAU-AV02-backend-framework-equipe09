@@ -44,11 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_bancos',
     'app_parceiros',
     'app_usuarios',
+    'app_bancos',
     'app_emprestimos',
-    'app_core',
     'app_historico',
 ]
 
