@@ -7,10 +7,10 @@ function Header() {
             </div>
             <div className="flex space-x-4">
                 <ul>
-                    <li><a className="bg-white text-blue-900 px-4 py-1 font-bold rounded hover:text-blue-500 transition duration-500" href="../login.html">Login</a></li>
+                    <li><a className="bg-white text-blue-900 px-4 py-1 font-bold rounded hover:text-blue-500 transition duration-500" href="/login">Login</a></li>
                 </ul>
                 <ul>
-                    <li><a className="bg-white text-blue-900 px-4 py-1 font-bold rounded hover:text-blue-500 transition duration-500" href="Register/">Registrar</a></li>
+                    <li><a className="bg-white text-blue-900 px-4 py-1 font-bold rounded hover:text-blue-500 transition duration-500" href="/register">Registrar</a></li>
                 </ul>
             </div>
         </header>
