@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'app_usuarios',
     'app_emprestimos',
     'app_core',
+    'app_historico',
 ]
 
 MIDDLEWARE = [
