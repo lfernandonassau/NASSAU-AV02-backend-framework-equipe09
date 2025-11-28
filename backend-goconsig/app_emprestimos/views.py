@@ -4,6 +4,6 @@ from .models import Simulacao
 from .serializers import SimulacaoSerializer
 
 # Create your views here.
-class ViewSet(viewsets.ModelViewSet):
+class SimulacaoViewSet(viewsets.ModelViewSet):
     queryset = Simulacao.objects.all()
     serializer_class = SimulacaoSerializer
