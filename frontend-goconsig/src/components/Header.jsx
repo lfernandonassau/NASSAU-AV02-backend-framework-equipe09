@@ -8,7 +8,7 @@ function Header() {
           <a href="/">GoConsig</a>
         </h1>
       </div>
-      <div className="hidden md:flex space-x-6 ml pt-4 px-10">
+      <div className="hidden md:flex space-x-6 ml-4 pt-4 px-10">
         <a
           href="/"
           className="text-gray-300 hover:text-white transition duration-300"
