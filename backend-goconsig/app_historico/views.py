@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser
 from .models import HistoricoSimulacao
 from .serializers import HistoricoSimulacaoSerializer
 
 # Create your views here.
 class HistoricoSimulacaoListAPIView(generics.ListAPIView):
     serializer_class = HistoricoSimulacaoSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # Apenas administradores podem visualizar o histórico
+    permission_classes = [IsAdminUser]
 
     def get_queryset(self):
         qs = HistoricoSimulacao.objects.all().order_by('-data_registro')

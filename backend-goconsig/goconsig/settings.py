@@ -48,22 +48,52 @@ INSTALLED_APPS = [
     # Importante para o funcionamento com o frontend React
     'corsheaders',
     'rest_framework',
+    'drf_spectacular',
     #=====================================================
     'app_bancos',
     'app_parceiros',
     'app_usuarios',
     'app_emprestimos',
     'app_historico',
+    #=====================================================
+    # Segurança adicional
+    'axes',
+    #=====================================================
+]
+
+# Autenticação: incluir o backend do django-axes (AxesStandaloneBackend)
+# Nota: em django-axes v5.0 o AxesModelBackend foi renomeado para AxesStandaloneBackend
+# coloque o backend do axes antes do backend padrão para que ele possa participar
+# das tentativas de autenticação/restrição.
+AUTHENTICATION_BACKENDS = [
+    'axes.backends.AxesStandaloneBackend',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 REST_FRAMEWORK = {
+        'DEFAULT_AUTHENTICATION_CLASSES': [
+            'rest_framework_simplejwt.authentication.JWTAuthentication',
+            'rest_framework.authentication.SessionAuthentication',
+        ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ],
+}
+
+# Configuração do drf-spectacular (geração automática de OpenAPI/Swagger)
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'GoConsig API',
+    'DESCRIPTION': 'Documentação automática da API (OpenAPI) gerada por drf-spectacular',
+    'VERSION': '1.0.0',
 }
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    #=======================================================
+    # Segurança adicional com django-axes
+    'axes.middleware.AxesMiddleware',
+    #=======================================================
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -152,3 +182,60 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#========================================================================
+# Configurações de segurança para produção
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+
+# HTTP Strict Transport Security (HSTS)
+#SECURE_HSTS_SECONDS = 31536000  # Um ano
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#SECURE_HSTS_PRELOAD = True
+# 
+#SECURE_BROWSER_XSS_FILTER = True
+#X_CONTENT_TYPE_OPTIONS = 'nosniff'
+
+X_FRAME_OPTIONS = 'DENY'
+
+
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+]
+
+AXES_FAILURE_LIMIT = 5  # Número máximo de tentativas de login
+AXES_COOLOFF_TIME = 1 # Tempo de bloqueio em horas
+
+# Logs
+# Diretório para arquivos de log (criado automaticamente se não existir)
+LOG_DIR = REPO_ROOT / 'logs'
+try:
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+except Exception:
+    # fallback para BASE_DIR caso não seja possível criar a pasta de logs
+    LOG_DIR = BASE_DIR
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': str(LOG_DIR / 'django_security.log'),
+        },
+    },
+    'loggers': {
+        'django.security': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+#========================================================================
