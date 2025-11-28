@@ -5,7 +5,7 @@ function TelaDeRegistro() {
   const [password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-  const [sucess, setSucess] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleSubimit = async (event) => {
     event.preventDefault();
