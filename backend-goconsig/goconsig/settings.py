@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     #=====================================================
+    'app_bancos',
     'app_parceiros',
     'app_usuarios',
     'app_emprestimos',
