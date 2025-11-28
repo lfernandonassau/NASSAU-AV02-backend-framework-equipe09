@@ -4,4 +4,4 @@ from .models import Simulacao
 class SimulacaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Simulacao
-        fields = ['margem_cliente', 'valor_liberado', 'parcela', 'comissao_parceiro_valor']
+        fields = ['cliente', 'banco', 'prazo', 'margem_cliente', 'valor_liberado', 'parcela', 'comissao_parceiro_valor']
