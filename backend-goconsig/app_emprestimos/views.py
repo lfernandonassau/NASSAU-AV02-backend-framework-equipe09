@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from rest_framework import ModelViewSet
 from rest_framework import viewsets
-from .models import Simulacao
-from .serializers import SimulacaoSerializer
+from app_emprestimos.models import Simulacao
+from app_emprestimos.serializers import SimulacaoSerializer
 
-# Create your views here.
-class SimulacaoViewSet(viewsets.ModelViewSet):
+
+class SimulacaoViewSet(viewsets.ModelViewSet): 
     queryset = Simulacao.objects.all()
     serializer_class = SimulacaoSerializer
