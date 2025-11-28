@@ -14,7 +14,6 @@ function RegisterPage() {
             <p className="font-bold text-5xl text-white flex pl-60 pt-10">
               Cadastre-se por aqui!
             </p>
-            <div></div>
           </div>
         </p>
         <Footer />
