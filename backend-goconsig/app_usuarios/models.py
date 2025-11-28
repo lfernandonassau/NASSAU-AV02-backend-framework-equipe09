@@ -17,3 +17,6 @@ class Cliente(models.Model):
 
     def __str__(self):
         return f"{self.nome} ({self.cpf})"
+    
+    def __str__(self):
+        return self.nome.__str__()
