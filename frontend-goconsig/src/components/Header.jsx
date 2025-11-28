@@ -1,20 +1,41 @@
 function Header() {
+  return (
+    //Header (topo do site), aqui pelo menos tentou a organização
 
-    return (
-        <header className="fixed top-0 left-0 w-full bg-blue-900 text-white p-4 flex justify-between items-center">
-            <div>
-                <h1 className="font-bold text-xl">GoConsig</h1>
-            </div>
-            <div className="flex space-x-4">
-                <ul>
-                    <li><a className="bg-white text-blue-900 px-4 py-1 font-bold rounded hover:text-blue-500 transition duration-500" href="/login">Login</a></li>
-                </ul>
-                <ul>
-                    <li><a className="bg-white text-blue-900 px-4 py-1 font-bold rounded hover:text-blue-500 transition duration-500" href="/register">Registrar</a></li>
-                </ul>
-            </div>
-        </header>
-    )
+    <header className="h-15 flex justify-between">
+      <div>
+        <h1 className="font-bold text-4xl ml-8 text-white pt-2">
+          <a href="/">GoConsig</a>
+        </h1>
+      </div>
+      <div className="hidden md:flex space-x-6 ml-4 pt-4 px-10">
+        <a
+          href="/"
+          className="text-gray-300 hover:text-white transition duration-300"
+        >
+          Home
+        </a>
+        <a
+          href="#sobre"
+          className="text-gray-300 hover:text-white transition duration-300"
+        >
+          Sobre
+        </a>
+        <a
+          href="#servicos"
+          className="text-gray-300 hover:text-white transition duration-300"
+        >
+          Serviços
+        </a>
+        <a
+          href="#contato"
+          className="text-gray-300 hover:text-white transition duration-300"
+        >
+          Contato
+        </a>
+      </div>
+    </header>
+  );
 }
 
 export default Header;
