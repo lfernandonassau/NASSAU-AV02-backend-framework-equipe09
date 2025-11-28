@@ -1,6 +1,6 @@
 function Header() {
   return (
-    //Header (topo do site), aq pelo menos tentou a organização
+    //Header (topo do site), aqui pelo menos tentou a organização
 
     <header className="h-15 flex justify-between">
       <div>
