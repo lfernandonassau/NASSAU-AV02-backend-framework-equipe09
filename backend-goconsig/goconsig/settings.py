@@ -238,4 +238,11 @@ LOGGING = {
         },
     },
 }
+
+# tempo em segundos (ex.: 3600 = 1 hora)
+SESSION_COOKIE_AGE = 3600
+# se True o cookie expira ao fechar o navegador
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# se True, cada request renova a expiração (sliding window)
+SESSION_SAVE_EVERY_REQUEST = False
 #========================================================================
