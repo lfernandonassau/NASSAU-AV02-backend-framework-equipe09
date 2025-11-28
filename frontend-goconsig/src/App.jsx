@@ -15,7 +15,7 @@ function App() {
       </div>
       <div>
         <h2 className="flex items-center ml-20  mt-2 text-2xl text-white font-bold">
-          o melhor site de simulção de emprestimos do mercado
+          o melhor site de simulação de empréstimos do mercado
         </h2>
       </div>
       <div>
