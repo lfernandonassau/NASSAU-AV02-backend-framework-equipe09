@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'app_bancos',
     'app_parceiros',
     'app_usuarios',
-    'app_bancos',
     'app_emprestimos',
     'app_historico',
 ]

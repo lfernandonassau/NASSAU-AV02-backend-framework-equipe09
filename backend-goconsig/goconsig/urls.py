@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app_usuarios.views import ClienteViewSet
+from app_parceiros.views import ParceiroViewSet
 from rest_framework.routers import DefaultRouter 
 from app_core import views as core_views
 from app_usuarios import views as usuarios_views
@@ -24,6 +25,7 @@ from django.views.generic import TemplateView
 
 router = DefaultRouter()
 router.register(r'clientes', ClienteViewSet)
+router.register(r'parceiros', ParceiroViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
