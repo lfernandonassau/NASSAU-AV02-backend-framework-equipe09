@@ -10,7 +10,7 @@ function TelaDeRegistro() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log9({ nomeCompleto, email, cpf, password });
+    console.log({ nomeCompleto, email, cpf, password });
   };
 
   return (
