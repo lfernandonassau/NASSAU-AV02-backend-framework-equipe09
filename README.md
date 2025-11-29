@@ -1,5 +1,9 @@
 # GoConsig Prototipo
 
+## Importante
+- Professor de Back-End para ver as documentações do Back-End olhe em backend-goconsig/docs
+- Professor de Front-end para ver as documentações do Front-End olhe em frontend-goconsig/docs
+
 ## 📌 Sobre o Projeto
 
 O **GoConsig** é uma aplicação/framework desenvolvido para **automatizar e padronizar o processo de cadastro e análise de propostas de empréstimos consignados**.
