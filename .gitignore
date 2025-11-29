@@ -67,7 +67,7 @@ secrets.json
 Thumbs.db
 
 *.log
-*.sqlite3
+.sqlite3
 *.db
 
 wheelhouse/
