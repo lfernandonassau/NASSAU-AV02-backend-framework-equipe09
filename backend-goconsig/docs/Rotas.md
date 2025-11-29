@@ -1,5 +1,20 @@
 # Rotas da aplicação (API & front)
 
+## Antes de tudo caso queira testar localmente o backend Django
+
+- faça no bash cd backend-goconsig
+- adicione na bash py manage.py createsuperuser para criar um superusuário (admin) para acessar o painel administrativo do Django em /admin
+
+OU USE o usuário já criado para testes:
+
+- username: admin
+- password: django123
+
+## Crie os seus proprios clientes, parceiros, bancos e simulações via API ou painel admin do Django.
+
+- use as rotas documentadas abaixo para interagir com a API RESTful ou use /admin para usar o painel administrativo do Django.
+de preferencia crie seus proprios clientes, parceiros, bancos e simulações para testar a API mas alguns dados já estão pré-criados para facilitar os testes menos clientes.
+
 ## Visão geral
 
 - **Arquivo fonte:** `goconsig/urls.py`
