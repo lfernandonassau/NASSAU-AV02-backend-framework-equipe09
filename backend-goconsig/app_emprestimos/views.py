@@ -1,9 +1,8 @@
-from rest_framework import ModelViewSet
-from rest_framework import viewsets
+from rest_framework.viewsets import ModelViewSet
 from app_emprestimos.models import Simulacao
 from app_emprestimos.serializers import SimulacaoSerializer
 
 
-class SimulacaoViewSet(viewsets.ModelViewSet): 
+class SimulacaoViewSet(ModelViewSet): 
     queryset = Simulacao.objects.all()
     serializer_class = SimulacaoSerializer
